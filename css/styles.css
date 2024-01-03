@@ -253,12 +253,12 @@ a {
 
 .main-container {
   padding-top: 72px;
-  padding-bottom: 200px;
+  padding-bottom: 72px;
 }
 @media screen and (min-width: 768px) {
   .main-container {
     padding-top: 112px;
-    padding-bottom: 204px;
+    padding-bottom: 112px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -319,7 +319,8 @@ a {
 
 /* section 2 Features */
 .icon {
-  display: flex;
+  display: none;
+  /* display: flex;
   align-items: center;
   justify-content: center;
   height: 112px;
@@ -327,7 +328,20 @@ a {
   border-radius: 4px;
   margin-bottom: 8px;
   border: 1px solid var(--LIGHT-SLATE, #8e8f99);
-  gap: 24px;
+  gap: 24px; */
+}
+@media only screen and (min-width: 1158px) {
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid var(--LIGHT-SLATE, #8e8f99);
+    gap: 24px;
+  }
 }
 .icon-item {
   display: flex;
@@ -346,25 +360,65 @@ a {
 }
 
 .section-caption {
-  display: flex;
-  gap: 24px;
+  /* display: flex;
+  gap: 24px; */
+}
+@media only screen and (min-width: 768px) {
+  .section-caption {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-caption {
+    gap: 24px;
+    flex-wrap: nowrap;
+  }
 }
 .caption-item {
-  width: calc((100% - 72px) / 4);
+  margin-bottom: 72px;
+  /* width: calc((100% - 72px) / 4); */
+}
+
+@media only screen and (min-width: 768px) {
+  .caption-item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 .caption {
   margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
+  /* font-weight: 500; */
+  /* font-size: 20px; */
+  color: #2e2f42;
+  /* text-align: center; */
+  font-size: 36px;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 767.98px) {
+  .caption {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .caption {
+    font-size: 20px;
+    font-weight: 500;
+  }
 }
 .text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1158px) {
+  .text {
+    font-weight: 400;
+  }
 }
 /* 3section ovr team */
 .img {
@@ -538,21 +592,57 @@ a {
 
 /* footer */
 .footer {
+  padding: 96px 0;
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
   margin-right: auto;
   margin-left: auto;
 }
-
+@media only screen and (max-width: 767.98px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1156.98px) {
+  .container-footer {
+    padding: 0 108px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container-footer {
+    gap: 0;
+  }
+}
 .container-footer {
-  display: flex;
-  align-items: baseline;
+  /* display: flex;
+  align-items: baseline; */
 }
 
 .container-logo {
-  margin-right: 120px;
+  /* margin-right: 120px; */
   /* margin-left: 156px; */
+}
+@media only screen and (max-width: 767.98px) {
+  .container-logo {
+    margin-bottom: 72px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container-logo {
+    margin-right: 120px;
+  }
 }
 
 .logo-footer {
@@ -576,8 +666,19 @@ a {
   color: #f4f4fd;
   letter-spacing: 0.02em;
   width: 264px;
+  text-align: left;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .footer-info {
+    margin-bottom: 72px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-info {
+    margin-right: 80px;
+  }
+}
 .footer-item {
   font-weight: 500;
   font-size: 16px;
@@ -590,6 +691,7 @@ a {
 .info-svg {
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
 .footer-info-svg {
@@ -614,9 +716,9 @@ a {
 .icon-networks {
   fill: #f4f4fd;
 }
-/* footer form */
+/* footer form відступ і флексти для планшету */
 .footer-form {
-  margin-left: 80px;
+  /* margin-left: 80px; */
 }
 .footer-form-text {
   margin-bottom: 16px;
@@ -628,7 +730,14 @@ a {
 }
 .footer-mail-form {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-mail-form {
+    gap: 24px;
+  }
 }
 .mail-input {
   width: 264px;
@@ -701,6 +810,11 @@ a {
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
+}
+@media only screen and (max-width: 768px) {
+  .modal-window {
+    max-width: 288px;
+  }
 }
 .modal-btn {
   position: absolute;
