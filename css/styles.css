@@ -40,14 +40,14 @@ a {
 }
 
 .section {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 96px;
+  /* padding-bottom: 48px; */
 }
 
 @media screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-bottom: 120px; */
   }
 }
 
@@ -64,8 +64,8 @@ a {
   margin-left: auto;
   margin-right: auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -233,6 +233,7 @@ a {
 }
 
 /* main  section button*/
+/* Hero */
 .main {
   margin-left: auto;
   margin-right: auto;
@@ -245,12 +246,56 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/hero/Dark-bg_mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_mob@2x.jpg);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_tab@1x.jpg);
+  }
+}
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_tab@2x.jpg);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_desk@1x.jpg);
+  }
+}
+@media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+  .main {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg_desk@2x.jpg);
+  }
+}
 .main-container {
   padding-top: 72px;
   padding-bottom: 72px;
